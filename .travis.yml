@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - '0.10'
+deploy:
+  provider: heroku
+  api_key:
+    secure: v9nBKys1doooswNqvJPjaUkbTMAiO9QRAhqmFbLsdHGMiLSHOnj8v7Jp8scY1IicwVo22a+ji/mny3WmWakwWFUk5U84akR3GKFBD3hqIb38va35/p55djrpoFx+eDSK9FovMhVetVYZnfmzE4t4/d7JzUnm2070dor+j4nE9CjlbAQMxg+PGsqb707Mw0L+ypIzGEG7wSkjkN9QSVqDYnG6x0buYA5Hy+UaTK6gtP/7resAAj44oo3iNtAi/eYXx1ZJ9uSL3s9A7IeL/jaLVN9n0YxNvedfk7t4+N/FLjashplc+r9wFYbpZ4RjB4o4tTbfDolmfnjbL8Fw0tPL3D4gebYDNZgFdV6UTgYBa92sNqLDNXHnLS/eLXinHkHb6+z+E9YaN6SagGAfCSrGRUz6wBa6VpucFv6nh1kY8BZoB4tuldq4cCLA00iu4E0NIyouG35rj1TrSYL+/JZxQ5vq9Wtcbezrx03QgMfQSZv9K4F8ZIorS394FqE74essbTK42yq8hJ82tq4C/DEJnkraIqIiOV9E1M+0tpnMSaxiNuGz9RFNqfJQuRX52WJAQciTn5VG67Z/QvxioShtBH93jue5kkK8GSZv7XXi+hR/xQNww8YSsTftqefRHcwyRHCGg+VYV3GPzUdo2Rwx6qX7ZCZpHCfA9oClQG320Qc=
+  app:
+    master: yochi-charlotte
+  on:
+    repo: yochiyochirb/charlotte
+notifications:
+  webhooks:
+    - https://idobata.io/hook/travis_ci/1be5b86a-9592-450a-b41d-dcfaa1829191
