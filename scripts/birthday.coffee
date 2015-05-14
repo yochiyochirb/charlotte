@@ -1,5 +1,5 @@
 # Description:
-#   Answer charlotte birthday.
+#   Answer Charlotte's birthday.
 #
 # Commands:
 #   hubot When is your birthday? - Returns her birthday.
