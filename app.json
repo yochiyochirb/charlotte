@@ -1,0 +1,16 @@
+{
+  "name":"charlotte",
+  "scripts":{},
+  "env":{
+    "HEROKU_URL":{
+      "required":true
+    },
+    "HUBOT_IDOBATA_API_TOKEN":{
+      "required":true
+    },
+    "HUBOT_NAME":{
+      "required":true
+    }
+  },
+  "addons":[]
+}
