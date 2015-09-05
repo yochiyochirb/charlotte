@@ -19,6 +19,6 @@ remind = (robot, msg, hour, minute, message) ->
     scheduleDate = new Date(currentYear, currentMonth, currentDay, hour, minute)
     new scheduler.scheduleJob scheduleDate, =>
       msg.send message
-    msg.send "#{scheduleDate} \"#{message}\", accepted."
+    msg.send "#{scheduleDate} \"#{message}\", sure."
   catch error
     msg.send error
