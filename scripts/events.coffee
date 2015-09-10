@@ -13,13 +13,13 @@ class Event
     @url = args.public_url
 
   @formatDate: (dateString) ->
-    toDouble = (num) ->
+    zeroPadding = (num) ->
       num += ""
       num = "0" + num if num.length == 1
       num
     date = new Date(dateString)
-    "#{date.getFullYear()}年#{toDouble(date.getMonth())}月#{toDouble(date.getDate())}日" +
-    " #{toDouble(date.getHours())}:#{toDouble(date.getMinutes())}"
+    "#{date.getFullYear()}年#{zeroPadding(date.getMonth())}月#{zeroPadding(date.getDate())}日" +
+    " #{zeroPadding(date.getHours())}:#{zeroPadding(date.getMinutes())}"
 
   @parse: (body) ->
     content = ""
