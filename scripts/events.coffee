@@ -46,7 +46,7 @@ class Event
     ].join("\n")
 
 module.exports = (robot) ->
-  robot.respond /events?/i, (msg) ->
+  robot.respond /events?$/i, (msg) ->
     response = ":hatching_chick: :baby_chick: よちよち.rb の公開中のイベント :hatching_chick: :baby_chick:\n\n"
     rp = require('request-promise')
     rp("http://api.doorkeeper.jp/groups/yochiyochirb/events")
