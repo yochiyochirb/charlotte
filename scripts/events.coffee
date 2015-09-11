@@ -10,6 +10,9 @@ class Event
     @starts_at = Event.formatDate(args.starts_at)
     @ends_at = Event.formatDate(args.ends_at)
     @venue_name = args.venue_name
+    @ticket_limit = args.ticket_limit
+    @participants = args.participants
+    @waitlisted = args.waitlisted
     @url = args.public_url
 
   @formatDate: (dateString) ->
@@ -37,6 +40,7 @@ class Event
       ":star2: #{@title}",
       ":calendar: #{@starts_at}",
       ":earth_asia: #{@venue_name}",
+      # ":couple: #{@participants}/#{@ticket_limit} (キャンセル待ち #{@waitlisted}人)",
       @url,
       ""
     ].join("\n")
@@ -54,6 +58,6 @@ module.exports = (robot) ->
         response += Event.parse(body)
         msg.send response
       .catch ->
-        msg.send "データ取得エラー :cry:\n"
+        msg.send "データ取得エラー (yochiyochibeer) :cry:\n"
     .catch ->
-      msg.send "データ取得エラー :cry:\n"
+      msg.send "データ取得エラー (yochiyochirb) :cry:\n"
