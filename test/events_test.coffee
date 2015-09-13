@@ -150,7 +150,7 @@ describe 'events', ->
         ['alice', 'hubot events']
         [
           'hubot',
-          "データ取得エラー (yochiyochirb) :cry:\n"
+          "データ取得エラー :cry:\n"
         ]
       ]
 
@@ -169,6 +169,6 @@ describe 'events', ->
         ['alice', 'hubot events']
         [
           'hubot',
-          "データ取得エラー (yochiyochibeer) :cry:\n"
+          "データ取得エラー :cry:\n"
         ]
       ]

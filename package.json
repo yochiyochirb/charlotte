@@ -5,6 +5,7 @@
   "author": "highwide <hochweit728@gmail.com>",
   "description": "Princess of Yochiyochi.rb",
   "dependencies": {
+    "bluebird": "^2.10.0",
     "hubot": "^2.12.0",
     "hubot-diagnostics": "0.0.1",
     "hubot-google-images": "^0.1.4",

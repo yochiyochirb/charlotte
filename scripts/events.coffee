@@ -4,6 +4,20 @@
 # Commands:
 #   hubot event(s) - Tells published events for yochiyochi.rb
 
+rp = require("request-promise")
+Bluebird = require("bluebird");
+
+GROUPS = [
+  {
+    url: "http://api.doorkeeper.jp/groups/yochiyochirb/events",
+    header: ":hatching_chick: :baby_chick: よちよち.rb の公開中のイベント :hatching_chick: :baby_chick:"
+  },
+  {
+    url: "http://api.doorkeeper.jp/groups/yochiyochibeer/events",
+    header: ":beers: :beer: よちよち.beer の公開中のイベント :beers: :beer:"
+  }
+]
+
 class Event
   constructor: (args) ->
     @title = args.title
@@ -47,17 +61,15 @@ class Event
 
 module.exports = (robot) ->
   robot.respond /events?$/i, (msg) ->
-    response = ":hatching_chick: :baby_chick: よちよち.rb の公開中のイベント :hatching_chick: :baby_chick:\n\n"
-    rp = require('request-promise')
-    rp("http://api.doorkeeper.jp/groups/yochiyochirb/events")
-    .then (body) ->
-      response += Event.parse(body)
-      response += "\n:beers: :beer: よちよち.beer の公開中のイベント :beers: :beer:\n\n"
-      rp("http://api.doorkeeper.jp/groups/yochiyochibeer/events")
-      .then (body) ->
-        response += Event.parse(body)
+    Bluebird.all(rp(group.url) for group in GROUPS)
+      .then (results) ->
+        response = ""
+        for group, index in results
+          response += "\n" unless index == 0
+          response += GROUPS[index].header
+          response += "\n\n"
+          response += Event.parse(group)
         msg.send response
-      .catch ->
-        msg.send "データ取得エラー (yochiyochibeer) :cry:\n"
-    .catch ->
-      msg.send "データ取得エラー (yochiyochirb) :cry:\n"
+      .catch (error) ->
+        # robot.logger.error error
+        msg.send "データ取得エラー :cry:\n"
