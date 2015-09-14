@@ -54,7 +54,7 @@ class Event
       ":star2: #{@title}",
       ":calendar: #{@starts_at}",
       ":earth_asia: #{@venue_name}",
-      # ":couple: #{@participants}/#{@ticket_limit} (キャンセル待ち #{@waitlisted}人)",
+      ":couple: #{@participants}/#{@ticket_limit} (キャンセル待ち #{@waitlisted}人)",
       @url,
       ""
     ].join("\n")
