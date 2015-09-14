@@ -31,9 +31,7 @@ class Event
 
   @formatDate: (dateString) ->
     zeroPadding = (num) ->
-      num += ""
-      num = "0" + num if num.length == 1
-      num
+      ("0" + num).slice(-2)
     date = new Date(dateString)
     "#{date.getFullYear()}年#{zeroPadding(date.getMonth() + 1)}月#{zeroPadding(date.getDate())}日" +
     " #{zeroPadding(date.getHours())}:#{zeroPadding(date.getMinutes())}"

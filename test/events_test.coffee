@@ -93,7 +93,7 @@ describe 'events', ->
         ['alice', 'hubot events']
         [
           'hubot',
-          ":hatching_chick: :baby_chick: よちよち.rb の公開中のイベント :hatching_chick: :baby_chick:\n\n:star2: よちよちスーパーもくもく会 第xx回\n:calendar: 2015年09月19日 14:00\n:earth_asia: 合同会社yochiyochi\nhttps://yochiyochirb.doorkeeper.jp/events/xxxxx\n\n\n:beers: :beer: よちよち.beer の公開中のイベント :beers: :beer:\n\n:star2: よちよち.beer 第xx回\n:calendar: 2015年09月14日 20:00\n:earth_asia: バーよちよち\nhttps://yochiyochirb.doorkeeper.jp/events/xxxxx\n\n"
+          ":hatching_chick: :baby_chick: よちよち.rb の公開中のイベント :hatching_chick: :baby_chick:\n\n:star2: よちよちスーパーもくもく会 第xx回\n:calendar: 2015年09月19日 14:00\n:earth_asia: 合同会社yochiyochi\n:couple: 15/20 (キャンセル待ち 0人)\nhttps://yochiyochirb.doorkeeper.jp/events/xxxxx\n\n\n:beers: :beer: よちよち.beer の公開中のイベント :beers: :beer:\n\n:star2: よちよち.beer 第xx回\n:calendar: 2015年09月14日 20:00\n:earth_asia: バーよちよち\n:couple: 10/15 (キャンセル待ち 0人)\nhttps://yochiyochirb.doorkeeper.jp/events/xxxxx\n\n"
         ]
       ]
 
@@ -112,7 +112,7 @@ describe 'events', ->
         ['alice', 'hubot event']
         [
           'hubot',
-          ":hatching_chick: :baby_chick: よちよち.rb の公開中のイベント :hatching_chick: :baby_chick:\n\n:star2: よちよちスーパーもくもく会 第xx回\n:calendar: 2015年09月19日 14:00\n:earth_asia: 合同会社yochiyochi\nhttps://yochiyochirb.doorkeeper.jp/events/xxxxx\n\n\n:beers: :beer: よちよち.beer の公開中のイベント :beers: :beer:\n\n:star2: よちよち.beer 第xx回\n:calendar: 2015年09月14日 20:00\n:earth_asia: バーよちよち\nhttps://yochiyochirb.doorkeeper.jp/events/xxxxx\n\n"
+          ":hatching_chick: :baby_chick: よちよち.rb の公開中のイベント :hatching_chick: :baby_chick:\n\n:star2: よちよちスーパーもくもく会 第xx回\n:calendar: 2015年09月19日 14:00\n:earth_asia: 合同会社yochiyochi\n:couple: 15/20 (キャンセル待ち 0人)\nhttps://yochiyochirb.doorkeeper.jp/events/xxxxx\n\n\n:beers: :beer: よちよち.beer の公開中のイベント :beers: :beer:\n\n:star2: よちよち.beer 第xx回\n:calendar: 2015年09月14日 20:00\n:earth_asia: バーよちよち\n:couple: 10/15 (キャンセル待ち 0人)\nhttps://yochiyochirb.doorkeeper.jp/events/xxxxx\n\n"
         ]
       ]
 
